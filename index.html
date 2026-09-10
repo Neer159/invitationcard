@@ -145,8 +145,6 @@ document.getElementById("share").onclick = async () => {
     const file = await getFile();
     if (navigator.share && (!navigator.canShare || navigator.canShare({files:[file]}))) {
       await navigator.share({
-        title: "લગ્ન પત્રિકા",
-        text: "લગ્ન પ્રસંગે આપને હાર્દિક આમંત્રણ.",
         files: [file]
       });
       status.textContent = "Share menu ખોલ્યું.";
